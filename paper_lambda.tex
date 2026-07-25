@@ -1,5 +1,7 @@
 \documentclass[aps,prd,twocolumn,superscriptaddress,%
-nofootinbib,longbibliography]{revtex4-2}
+nofootinbib,longbibliography,floatfix]{revtex4-2}
+
+
 % PRD submission: twocolumn (above) or reprint,onecolumn for editorial review
 \usepackage{amsmath,amssymb,graphicx}
 \usepackage[hidelinks]{hyperref}
@@ -307,13 +309,15 @@ T_{\mu\nu}^{\text{matter}}
 \end{equation}
 The effective action (minimal coupling, constant $\rho_{\text{vac}}$) is
 \begin{equation}
-\label{eq:action}
-S
-=
-\frac{c^4}{16\pi G}\int\! d^4x\,\sqrt{-g}\,R
--\int\! d^4x\,\sqrt{-g}\,\rho_{\text{vac}} c^2
-+ S_{\text{matter}}[g_{\mu\nu},\psi].
+\label{eq:effective_action_constant}
+\begin{aligned}
+S = &\frac{c^4}{16\pi G} \int\! d^4x \sqrt{-g}\, R \\
+&- \int\! d^4x \sqrt{-g}\, \rho_{\text{vac}} c^2 
++ S_{\text{matter}}[g_{\mu\nu}, \psi].
+\end{aligned}
 \end{equation}
+
+
 Variation with respect to $g^{\mu\nu}$ reproduces
 Eqs.~\eqref{eq:einstein_split}--\eqref{eq:einstein_lambda} with
 $\Lambda=\frac{8\pi G}{c^2}\rho_{\text{vac}}$.
@@ -390,29 +394,25 @@ The action is
 =
 \int\! d^4x\sqrt{-g}\,
 \Big[
-&\frac{c^4}{16\pi G}R
--\frac12 g^{\mu\nu}\nabla_\mu P_{\rm vac}\nabla_\nu P_{\rm vac}
--V(P_{\rm vac})
-+\mathcal{L}_{\rm matter}(\psi,\tilde g_{\mu\nu})
-\\
-&-\frac14 B(P_{\rm vac})F_{\mu\nu}F^{\mu\nu}
--\frac14 C(P_{\rm vac})F_{\mu\nu}\tilde F^{\mu\nu}
+&\frac{c^4}{16\pi G}R \\
+&-\frac12 g^{\mu\nu}\nabla_\mu P_{\rm vac}\nabla_\nu P_{\rm vac} \\
+&-V(P_{\rm vac})
++\mathcal{L}_{\rm matter}(\psi,\tilde g_{\mu\nu}) \\
+&-\frac14 B(P_{\rm vac})F_{\mu\nu}F^{\mu\nu} \\
+&-\frac14 C(P_{\rm vac})F_{\mu\nu}\tilde F^{\mu\nu}
 \Big],
 \end{aligned}
 \end{equation}
-with $\tilde g_{\mu\nu}=A^2(P_{\rm vac})g_{\mu\nu}$,
-\begin{equation}
-\label{eq:A_quadratic}
-A(P_{\rm vac})
-=
-\exp\!\left[
--\frac{\lambda_v}{2c^2}(P_{\rm vac}-P_0)^2
-\right],
-\qquad
-\alpha_A(P_{\rm vac})\equiv\frac{d\ln A}{dP_{\rm vac}}
-=
--\frac{\lambda_v}{c^2}(P_{\rm vac}-P_0),
-\end{equation}
+
+
+
+with $\tilde{g}_{\mu\nu} = A^2(P_{\rm vac})g_{\mu\nu}$, where
+\begin{align}
+A(P_{\rm vac}) &= \exp\left[ -\frac{\lambda_v}{2c^2}
+(P_{\rm vac} - P_0)^2 \right], \\
+\alpha_A(P_{\rm vac}) &= \frac{d\ln A}{dP_{\rm vac}} 
+= -\frac{\lambda_v}{c^2}(P_{\rm vac} - P_0),
+\end{align}
 and stabilizing potential
 \begin{equation}
 \label{eq:Vquartic}
@@ -804,17 +804,19 @@ as proof that $a_0$ alone generates the full dark-energy density.
 \subsection{Numerical Evaluation}
 \label{sec:numerical}
 
-Using $H_0=67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$,
-$a_0=1.20\times10^{-10}\,\mathrm{m/s^2}$, and
-$\Omega_\Lambda=0.688$~\cite{Planck2020}, Eq.~\eqref{eq:rho_boundary}
-gives
+Using $H_0 = 67.4~\mathrm{km~s^{-1}~Mpc^{-1}}$, $a_0 = 1.20 \times 
+10^{-10}~\mathrm{m/s^2}$, and $\Omega_\Lambda = 0.688$ \cite{Planck2018}, 
+Eq.~\eqref{eq:rho_bd_definition} gives
 \begin{equation}
-\label{eq:numbers}
-\Omega_{\rm bd}=0.183,\quad
-\rho_{\rm bd}=1.56\times10^{-27}\,\mathrm{kg/m^3},\quad
-\rho_\Lambda=5.33\times10^{-27}\,\mathrm{kg/m^3}.
+\label{eq:numerical_densities}
+\begin{aligned}
+\Omega_{\rm bd} &= 0.183, \quad 
+\rho_{\rm bd} = 1.56 \times 10^{-27}~\mathrm{kg/m^3}, \\
+\rho_\Lambda &= 5.33 \times 10^{-27}~\mathrm{kg/m^3}.
+\end{aligned}
 \end{equation}
 These numbers are reproduced by \texttt{calcular\_rho\_vac.py}.
+
 
 % -------------------------------------------------------------
 \subsection{Horizon Attractor (Camino 1+2 Fusion)}
@@ -1081,28 +1083,27 @@ records the chameleon/MOND bridge still open for Test~2 while
 Appendix~\ref{app:core_from_V} ties Test~4 to the saturating branch of
 Eq.~\eqref{eq:Vquartic}.
 
-\begin{table}[h]
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\caption{Status of the horizon-attractor stack (Sec.~\ref{sec:horizon_attractor}).
-Constitutive matching at $H_0$; not a claim of ab initio $\Omega_\Lambda$
+\begin{table*}[t]
+\caption{Status of the horizon-attractor stack (Sec.~\ref{sec:horizon_attractor}). 
+Constitutive matching at $H_0$; not a claim of ab initio $\Omega_\Lambda$ 
 derivation.}
-\label{tab:attractor_status}
-\begin{ruledtabular}
+\label{tab:validation}
+\centering
 \begin{tabular}{lll}
-\textbf{Component} & \textbf{Status} & \textbf{Interpretation} \\
+\hline\hline
+Component & Status & Interpretation \\
 \hline
-3D bulk sector & Null test &
-Volumetric PDE veto ($\sim 20\%$ overshoot) \\
-Cubic $S_{\rm vac}$ & Post-diction &
-$x_\star=0.689$ ($+0.17\%$ vs.\ Planck; audit in App.~\ref{app:cubic_truncation}) \\
-Circularity & Removed &
-$\Omega_\Lambda$ absent from $\chi$; $\zeta/\chi$ from $(P_0,\phi_0,R_{\rm crit})$ \\
-EFT status & Attractor &
-Falsifiable constitutive closure (not ab initio QG) \\
+3D bulk sector & Null test & Volumetric PDE veto 
+($\sim 20\%$ overshoot) \\
+Cubic $S_{\rm vac}$ & Post-diction & $x_\star = 0.689$ 
+($+0.17\%$ vs. Planck; audit in App.~A) \\
+Circularity & Removed & $\Omega_\Lambda$ absent from $\chi$; 
+$\zeta/\chi$ from $(P_0, \phi_0, R_{\rm crit})$ \\
+EFT status & Attractor & Falsifiable constitutive closure 
+(not \textit{ab initio} QG) \\
+\hline\hline
 \end{tabular}
-\end{ruledtabular}
-\end{table}
+\end{table*}
 
 % -------------------------------------------------------------
 % \textcolor{blue}{===========================================}
@@ -1207,42 +1208,51 @@ simulations executed in a reproducible Python-based environment.
 Table~\ref{tab:validation} summarizes the quantitative outputs
 across all five regimes.
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.82\linewidth]{attack_gr_outputs/evidence/phase_d_h0_posteriors.png}
+\caption{EFMVR Phase D MCMC marginalized posteriors. The global 
+background anchor $H_0^\star$ tightly fits the Planck baseline, 
+while the local channel reading $H_{\rm local,\,e\!f\!f}^0$ 
+overlaps with the SH0ES distance ladder window, resolving the 
+Hubble tension via dynamic channel divergence.}
+\label{fig:h0_posteriors_jwst}
+\end{figure*}
 
 
 % -------------------------------------------------------------
 % \textcolor{blue}{===========================================}
 % -------------------------------------------------------------
-\begin{table}[h]
-\footnotesize
-\setlength{\tabcolsep}{2.5pt}
-\caption{Internal consistency benchmarks (not independent falsification).
-See Sec.~\ref{sec:test_scope}.}
-\label{tab:validation}
-\begin{ruledtabular}
-\begin{tabular}{lccc}
-\textbf{Test Regime} & \textbf{Quantity} & 
-\textbf{Theoretical / Observed} & \textbf{Status} \\
+\begin{table*}[t]
+\caption{Internal consistency benchmarks (not independent 
+falsification). See Sec.~VI\,A.}
+\label{tab:internal_benchmarks}
+\centering
+\begin{tabular}{llcc}
+\hline\hline
+Test Regime & Quantity & Theoretical / Observed & Status \\
 \hline
-1. Solar Field & Perihelion & $42.98''/\text{cy}$ ($\Delta = 0.005\%$) & \text{Pass} \\
-2. Galactic ($a_0$) & SPARC Curves & Flat $199.77\text{ k/s}$ ($15\text{--}50\text{k}$) & \text{Pass} \\
-3. Strong Field & Sirius B & $77.05\text{ km/s}$ ($\Delta = 4.17\%$)~\cite{Shapiro2004} & \text{Pass} \\
-4. Limit $r \to 0$ & Core saturation & Finite $P$ (Eq.~\eqref{eq:Pvac_sat}) & \text{Pass} \\
-5. Binary / GW & LIGO Speed & $v_{\text{gw}} = c$ ($\Delta = 0.00$) & \text{Pass} \\
+1. Solar Field & Perihelion & $42.98''/\mathrm{cy}$ 
+($\Delta = 0.005\%$) & Pass \\
+2. Galactic ($a_0$) & SPARC Curves & Flat $199.77~\mathrm{km/s}$ 
+($15$--$50\,\mathrm{kpc}$) & Pass \\
+3. Strong Field & Sirius B & $77.05~\mathrm{km/s}$ 
+($\Delta = 4.17\%$) \cite{Bond2017} & Pass \\
+4. Limit $r \to 0$ & Core saturation & Finite $P$ 
+(Eq.~\eqref{eq:P_sat}) & Pass \\
+5. Binary / GW & LIGO Speed & $v_{\rm gw} = c$ 
+($\Delta = 0.00$) & Pass \\
+\hline\hline
 \end{tabular}
-\end{ruledtabular}
-\end{table}
+\end{table*}
 
-This section summarizes the quantitative validation of the EFMVR 
-framework across both the early-universe thermodynamic boundaries 
+This section summarizes the quantitative validation of the EFMVR
+framework across both the early-universe thermodynamic boundaries
 and the late-time observational pipelines.
 
-\begin{table}[h!]
-\caption{EFMVR Pipeline Statistical Summary, Phase D Posteriors, 
-and Observational Benchmarks.}
-\label{tab:efmvr_metrics}
-\centering
+% Only invoke the automated double-column payload here
 \input{attack_gr_outputs/evidence/manuscript_tables.tex}
-\end{table}
+
 
 The global background Hubble parameter remains tightly anchored 
 within the Planck confidence interval, while the local effective 
@@ -1282,7 +1292,7 @@ consistency.
 % -------------------------------------------------------------
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.75\textheight]{fig2_singularidad.pdf}
+\includegraphics[width=0.75\textheight]{fig3_singularidad.pdf}
 \caption{Phenomenological core regularization (Test~4):
 effective Kretschmann proxy near $r\to 0$.
 Classical Schwarzschild curvature diverges (dashed).

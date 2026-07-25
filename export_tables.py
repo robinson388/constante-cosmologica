@@ -3,7 +3,7 @@
 """
 EFMVR LaTeX Table Exporter Pipeline
 Purpose: Generate clean, publication-ready LaTeX tabular macros
-         with strict math-mode enclosure for units.
+         with double-column table* encapsulation.
 """
 
 import json
@@ -36,6 +36,11 @@ latex_content = f"""% Generated automatically by export_tables.py.
 \\newcommand{{\\EFMVRGravitonMass}}{{{m_g:.2e}}}
 \\newcommand{{\\EFMVRComptonWavelength}}{{{lambda_g:.2e}}}
 
+\\begin{{table*}}[t]
+\\caption{{EFMVR Pipeline Statistical Summary, Phase D Posteriors, 
+and Observational Benchmarks.}}
+\\label{{tab:efmvr_metrics}}
+\\centering
 \\begin{{tabular}}{{llll}}
 \\hline
 Parameter & Target Channel & EFMVR Value & Benchmark \\\\
@@ -54,6 +59,7 @@ $\\ge \\EFMVRComptonWavelength\\ \\mathrm{{km}}$ &
 $\\approx 7.00 \\times 10^{{12}}$ \\\\
 \\hline
 \\end{{tabular}}
+\\end{{table*}}
 """
 
 os.makedirs(os.path.dirname(OUTPUT_TEX), exist_ok=True)
