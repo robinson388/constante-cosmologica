@@ -1,0 +1,25 @@
+{
+    "model_meta": {
+        "framework": "EFMVR_GRAVEDAD3_CROMATIC2",
+        "closure_mode": "PURE_QUARTIC_MECHANICAL_HORIZON",
+        "description": "Dynamic attractor derived ab-initio from V''''/V'' truncation"
+    },
+    "priors": {
+        "x_star_attractor": {
+            "value": 0.7084689694248756,
+            "type": "fixed_attractor_constraint"
+        },
+        "Bmax_prior_center": {
+            "value": 0.0767,
+            "min": 0.023,
+            "max": 0.089,
+            "ref_lensing": "\u03b7_trimmed_coherence"
+        },
+        "beta_struct_target": {
+            "value": 1.744,
+            "override_by_x_star": true,
+            "calculated_from_closure": 1.7711724235621888
+        }
+    },
+    "pipeline_status": "INTEGRATION_SUCCESS_CONTROL_PASS"
+}

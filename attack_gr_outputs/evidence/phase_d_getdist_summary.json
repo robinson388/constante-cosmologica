@@ -1,0 +1,29 @@
+{
+    "analysis_meta": {
+        "run_mode": "PHASE_D2_PLANCK_SH0ES_JOINT_MCMC",
+        "horizon_attractor_x_star": 0.7084689694248756,
+        "convergence_status": "CONVERGED_ESS_PASS"
+    },
+    "posteriors_68_CL": {
+        "H0_star": {
+            "mean": 68.11499457144717,
+            "lower": 66.93553340548658,
+            "upper": 69.3025482926278
+        },
+        "H0_local_eff": {
+            "mean": 73.995558967369,
+            "lower": 69.80896739162652,
+            "upper": 78.19369160147288
+        },
+        "Bmax": {
+            "mean": 0.07186041651432061,
+            "lower": 0.03705265599817332,
+            "upper": 0.10638637849606059
+        },
+        "beta_struct": {
+            "mean": 1.9014056548352753,
+            "lower": 1.024321991737785,
+            "upper": 2.7786019648117897
+        }
+    }
+}

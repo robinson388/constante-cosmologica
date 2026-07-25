@@ -1,0 +1,63 @@
+{
+    "flrw_tracking": {
+        "w_chi_recombination": -1.0000168860167453,
+        "w_chi_today": -1.0015151515151515
+    },
+    "planck_audit": {
+        "Linear screening (eps_T)": {
+            "delta_N": 0.02857142857142857,
+            "N_eff_total": 3.0725714285714285,
+            "z_score": 0.34511278195488626,
+            "status": "PASS"
+        },
+        "Quadratic screening (eps_T^2)": {
+            "delta_N": 0.0008163265306122448,
+            "N_eff_total": 3.0448163265306123,
+            "z_score": 0.19903329752953777,
+            "status": "PASS"
+        },
+        "Mixed activation screening (eps_T * beta_0)": {
+            "delta_N": 0.005488546606399999,
+            "N_eff_total": 3.0494885466064,
+            "z_score": 0.22362392950736726,
+            "status": "PASS"
+        },
+        "Electromagnetic-weighted screening (eps_T * alpha_em)": {
+            "delta_N": 0.0002084957142857143,
+            "N_eff_total": 3.044208495714286,
+            "z_score": 0.195834187969925,
+            "status": "PASS"
+        },
+        "Lensing residual sector (delta_N)": {
+            "delta_N": 0.016153,
+            "N_eff_total": 3.060153,
+            "z_score": 0.2797526315789474,
+            "status": "PASS"
+        },
+        "Suppressed lensing screening (eps_T * delta_N)": {
+            "delta_N": 0.0004615142857142857,
+            "N_eff_total": 3.0444615142857145,
+            "z_score": 0.19716586466165487,
+            "status": "PASS"
+        },
+        "Suppressed activation screening (beta_0 * delta_N)": {
+            "delta_N": 0.003102977266661272,
+            "N_eff_total": 3.047102977266661,
+            "z_score": 0.21106830140347901,
+            "status": "PASS"
+        },
+        "Unsuppressed torsional sector (24)": {
+            "delta_N": 24.0,
+            "N_eff_total": 27.044,
+            "z_score": 126.51052631578946,
+            "status": "FAIL"
+        },
+        "Unsuppressed full activation sector (34)": {
+            "delta_N": 34.0,
+            "N_eff_total": 37.044,
+            "z_score": 179.1421052631579,
+            "status": "FAIL"
+        }
+    },
+    "pipeline_gate": "PASSED_SUPPRESSED_SECTOR_LOCK"
+}

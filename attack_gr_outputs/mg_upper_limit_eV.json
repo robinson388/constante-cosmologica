@@ -1,0 +1,7 @@
+{
+    "beta_95": 2.664,
+    "lambda_g_km": 6690000000000.0,
+    "mg_upper_limit_eV": 1.853276508303493e-22,
+    "ratio_vs_lvk": 10.5299801608153,
+    "status": "TENSOR_BRIDGE_COMPATIBLE_PASS"
+}

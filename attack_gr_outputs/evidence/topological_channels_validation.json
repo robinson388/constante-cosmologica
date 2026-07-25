@@ -1,0 +1,18 @@
+{
+    "dimensions": {
+        "torsion": 24,
+        "maxwell": 6,
+        "boundary": 4,
+        "total_neff": 34
+    },
+    "metrics": {
+        "beta_predicted": 0.19209913122359526,
+        "beta_observed": 0.1921,
+        "absolute_error": 8.687764047332625e-07,
+        "relative_error_percent": 0.0004522521627971174
+    },
+    "landscape": {
+        "verified_minimum_channel": 34,
+        "status": "TOPOLOGICAL_INDEX_STABLE_PASS"
+    }
+}
