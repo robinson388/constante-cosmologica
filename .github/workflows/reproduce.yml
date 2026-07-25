@@ -1,0 +1,35 @@
+name: constante-cosmologica-reproduce
+
+on:
+  push:
+    paths:
+      - "**"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run quick reproducibility
+        run: bash run_all.sh quick
+
+      - name: Upload JSON artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: constante-cosmologica-outputs
+          path: |
+            *_outputs.json
+            camino12_*_outputs.json
+            camino1_outputs.json

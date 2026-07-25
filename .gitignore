@@ -1,0 +1,24 @@
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+paper_lambdaNotes.bib
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Local alias PDF (regenerate with compile.sh)
+constd.pdf
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,103 @@
+{
+  "paso1_vacio_3d": {
+    "elapsed_s": 86.80813384056091,
+    "2D": {
+      "grid": "128x128",
+      "V_rms_high": 0.8051070862303329,
+      "V_rms_low": 0.5408798805825166,
+      "f_hyst": 0.6718111041787258
+    },
+    "3D": {
+      "grid": "40x40x40",
+      "V_rms_high": 0.7550036820497064,
+      "V_rms_low": 0.5807553628048482,
+      "f_hyst": 0.7692086497223382
+    },
+    "f_3d_over_2d": 1.1449775761933538,
+    "delta_f_hyst_3d_vs_Omega_L": 0.08120864972233821
+  },
+  "paso2_chi_shell": {
+    "S_hor": 2.265441229449521e+122,
+    "T_GH_K": 2.65535359442189e-30,
+    "chi_inv_J_m3": 7.668947770264336e-10,
+    "sigma_chi_Pa": 3.5085355134486268e+16,
+    "sigma_stack_Pa": 1052560654034587.9,
+    "f_chi_sigma_ratio": 33.333333333333336,
+    "f_chi_alt_sqrt": 1.0182840517262362,
+    "f_chi_geometric_mix": 5.826045118621026,
+    "note": "f_chi_mix = sqrt(f_chi * f_chi_alt) acota la correccion entropica."
+  },
+  "paso3_lambda_P": {
+    "lambda_P_match": 1.5497967653162685e-06,
+    "V_pp_at_P0": 1.1438247130074944e-07,
+    "sigma_lambda_Pa": 4.112442874699441e-44,
+    "f_lambda_sigma_ratio": 3.907083985075793e-59,
+    "f_lambda_multiplicative": 2.550294100687213,
+    "rho_Lambda_kg_m3": 5.8706043545223356e-27
+  },
+  "paso4_combined": {
+    "sigma_stack_Pa": 1052560654034587.9,
+    "sigma_required_Pa": 8031894525699980.0,
+    "enhancement_required": 7.630813953488372,
+    "f_hyst_2d_sim": 0.6718111041787258,
+    "f_hyst_3d_sim": 0.7692086497223382,
+    "scenarios": [
+      {
+        "scenario": "stack_only",
+        "enhancement": 1.0,
+        "sigma_Pa": 1052560654034587.9,
+        "alpha_s": 0.030000000000000002,
+        "x_star": 5.25,
+        "delta_vs_Omega_L": 4.562
+      },
+      {
+        "scenario": "sqrt_chi_x_lam",
+        "enhancement": 9.220076103603507,
+        "sigma_Pa": 9704689333857582.0,
+        "alpha_s": 0.27660228310810525,
+        "x_star": 0.5694096166894033,
+        "delta_vs_Omega_L": -0.11859038331059668
+      },
+      {
+        "scenario": "sqrt_chi_mix_x_lam",
+        "enhancement": 3.8546243002861815,
+        "sigma_Pa": 4057225874566839.0,
+        "alpha_s": 0.11563872900858546,
+        "x_star": 1.3620004418096519,
+        "delta_vs_Omega_L": 0.6740004418096519
+      },
+      {
+        "scenario": "f3d_ratio_x_sqrt_chi_lam",
+        "enhancement": 10.556780389422206,
+        "sigma_Pa": 1.1111651671189748e+16,
+        "alpha_s": 0.3167034116826662,
+        "x_star": 0.4973107146626305,
+        "delta_vs_Omega_L": -0.19068928533736945
+      },
+      {
+        "scenario": "f_hyst_2d_as_x_target",
+        "x_star": 0.6718111041787258,
+        "delta_vs_Omega_L": -0.01618889582127414,
+        "sigma_implied_enhancement": 7.814696671943238
+      },
+      {
+        "scenario": "f_hyst_3d_as_x_target",
+        "x_star": 0.7692086497223382,
+        "delta_vs_Omega_L": 0.08120864972233821,
+        "sigma_implied_enhancement": 6.82519626098211
+      }
+    ],
+    "best_scenario": {
+      "scenario": "f_hyst_2d_as_x_target",
+      "x_star": 0.6718111041787258,
+      "delta_vs_Omega_L": -0.01618889582127414,
+      "sigma_implied_enhancement": 7.814696671943238
+    }
+  },
+  "targets": {
+    "Omega_L": 0.688,
+    "f_hyst_2d": 0.6573795800626862,
+    "Omega_m": 0.315
+  },
+  "verdict_es": "Cierre parcial: escenario 'f_hyst_2d_as_x_target' da x*=0.672 (objetivo 0.688)."
+}

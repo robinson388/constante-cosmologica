@@ -1,0 +1,88 @@
+{
+  "test": "Test 2 \u2014 SPARC from spherical AQUAL (field deep-limit)",
+  "equation": "d/dr(r^2 mu(g/a0) g) = 4 pi G rho; g = K_g|dP/dr| in Appendix",
+  "inputs": {
+    "M_gal_Msun": 100000000000.0,
+    "R_d_kpc": 3.0,
+    "a0": 1.2e-10
+  },
+  "curves_kpc": [
+    {
+      "r_kpc": 5.0,
+      "v_kepler_kms": 206.6167084220827,
+      "v_mond_formula_kms": 206.6167084220827,
+      "v_aqual_field_kms": 158.27922265450468,
+      "delta_aqual_vs_mond_pct": -23.394761312736033
+    },
+    {
+      "r_kpc": 10.0,
+      "v_kepler_kms": 190.67721725756024,
+      "v_mond_formula_kms": 191.5550891210646,
+      "v_aqual_field_kms": 196.39248588730885,
+      "delta_aqual_vs_mond_pct": 2.525329286964002
+    },
+    {
+      "r_kpc": 15.0,
+      "v_kepler_kms": 165.8661058082449,
+      "v_mond_formula_kms": 197.71787352315695,
+      "v_aqual_field_kms": 204.2440504496886,
+      "delta_aqual_vs_mond_pct": 3.30075213244051
+    },
+    {
+      "r_kpc": 20.0,
+      "v_kepler_kms": 145.92185642915715,
+      "v_mond_formula_kms": 199.2791967250686,
+      "v_aqual_field_kms": 204.72877538611607,
+      "delta_aqual_vs_mond_pct": 2.734645036012397
+    },
+    {
+      "r_kpc": 25.0,
+      "v_kepler_kms": 131.01068346516777,
+      "v_mond_formula_kms": 199.6561306787212,
+      "v_aqual_field_kms": 203.89144683475564,
+      "delta_aqual_vs_mond_pct": 2.121305337149768
+    },
+    {
+      "r_kpc": 30.0,
+      "v_kepler_kms": 119.70032372590723,
+      "v_mond_formula_kms": 199.74332181337786,
+      "v_aqual_field_kms": 202.89902481454357,
+      "delta_aqual_vs_mond_pct": 1.579879103099181
+    },
+    {
+      "r_kpc": 35.0,
+      "v_kepler_kms": 110.84262784982207,
+      "v_mond_formula_kms": 199.76284279191012,
+      "v_aqual_field_kms": 202.15393206610057,
+      "delta_aqual_vs_mond_pct": 1.1969639802739542
+    },
+    {
+      "r_kpc": 40.0,
+      "v_kepler_kms": 103.68821208672925,
+      "v_mond_formula_kms": 199.76710813892146,
+      "v_aqual_field_kms": 201.43828426910926,
+      "delta_aqual_vs_mond_pct": 0.8365622077412456
+    },
+    {
+      "r_kpc": 45.0,
+      "v_kepler_kms": 97.75907933191827,
+      "v_mond_formula_kms": 199.76802307642146,
+      "v_aqual_field_kms": 201.19611908671402,
+      "delta_aqual_vs_mond_pct": 0.714877180191268
+    },
+    {
+      "r_kpc": 50.0,
+      "v_kepler_kms": 92.74258542389211,
+      "v_mond_formula_kms": 199.7682165375128,
+      "v_aqual_field_kms": 200.93831698543,
+      "delta_aqual_vs_mond_pct": 0.5857290354782014
+    }
+  ],
+  "summary": {
+    "v_50kpc_aqual_kms": 200.93831698543,
+    "v_50kpc_mond_kms": 199.7682165375128,
+    "mean_abs_delta_pct": 3.899080461208656,
+    "suite_band_150_250": true
+  },
+  "verdict_es": "AQUAL integrado: v(50kpc)=200.9 km/s, MOND formula 199.8, delta medio 3.9%. Suite pass=True."
+}

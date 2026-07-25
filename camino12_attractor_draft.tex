@@ -1,0 +1,75 @@
+% Draft subsection: Camino 1+2 fusion (paste into paper_lambda.tex when ready)
+% Thermodynamic horizon attractor for Omega_Lambda
+
+\subsection{Horizon Attractor (Camino 1+2 Fusion Draft)}
+\label{sec:horizon_attractor}
+
+We combine (i)~the passive/dynamical split of
+Sec.~\ref{sec:constitutive_closure} with (ii)~hysteretic self-organization
+motivated by the \texttt{VACIO} continuum model.
+
+\paragraph{Sector accounting (flat FLRW).}
+On cosmological scales the closure relation is
+\begin{equation}
+\label{eq:flat_closure}
+\Omega_\Lambda + \Omega_m + \Omega_r = 1,
+\end{equation}
+with $\Omega_r\ll 1$.
+The dynamical coupling $\Omega_{\rm bd}=a_0/(cH_0)$ of
+Eq.~\eqref{eq:rho_boundary} is \emph{not} an extra component in
+Eq.~\eqref{eq:flat_closure}; it diagnoses the saturation scale of the
+$P_{\rm vac}$ response sector at the same era as $\Omega_\Lambda$.
+
+\paragraph{Hubble shell free energy.}
+On a comoving Hubble sphere $\partial V_H$ ($R_H=c/H_0$), define an
+effective free-energy functional for the organized fraction
+$x\in[0,1]$ of the passive minimum $P_0$:
+\begin{equation}
+\label{eq:F_horizon}
+\mathcal{F}(x)
+=
+\underbrace{\rho_{\rm crit}V_H\,(1-x)\,\bar\Omega_m}_{\text{bulk relaxation}}
++
+\underbrace{\sigma_{\rm eff}\,A_H\,x(1-x)}_{\text{shell tension}}
++
+\underbrace{\chi^{-1}(1-x)^2}_{\text{entropy $S_{\rm vac}(P)$ curvature}},
+\end{equation}
+where $V_H=\frac{4}{3}\pi R_H^3$, $A_H=4\pi R_H^2$, and $\chi$ is the
+entropy curvature of Eq.~\eqref{eq:Sv_eos} in the covariant sector
+(Sec.~II of \cite{gravedad3zenodo}).
+
+\paragraph{Attractor condition.}
+Stationarity $\partial\mathcal{F}/\partial x=0$ yields
+\begin{equation}
+\label{eq:attractor_x}
+\rho_{\rm crit}V_H\,\bar\Omega_m
+=
+\sigma_{\rm eff}A_H\,(1-2x)
++
+2\chi^{-1}(1-x).
+\end{equation}
+The \texttt{VACIO} hysteresis fraction $f_{\rm hyst}$ (memory after
+lowering the entropy-control parameter) is identified \emph{provisionally} with
+\begin{equation}
+\label{eq:hyst_ident}
+x_\star \equiv \Omega_\Lambda \simeq f_{\rm hyst},
+\end{equation}
+so that Eq.~\eqref{eq:flat_closure} becomes a \emph{consistency check}
+\begin{equation}
+\label{eq:matter_from_hyst}
+\Omega_m + \Omega_r \stackrel{?}{=} 1-f_{\rm hyst}.
+\end{equation}
+Numerical audit (\texttt{camino12\_fusion.py}): $f_{\rm hyst}\simeq 0.657$,
+$1-f_{\rm hyst}\simeq 0.343$ vs.\ $\Omega_m\simeq 0.315$ ($\sim 9\%$ offset);
+$f_{\rm hyst}$ vs.\ $\Omega_\Lambda\simeq 0.688$ ($\sim 3\%$ offset).
+
+\paragraph{What is and is not claimed.}
+Eq.~\eqref{eq:flat_closure} alone gives
+$\Omega_\Lambda=1-\Omega_m-\Omega_r\simeq 0.685$ and is the standard
+flat-universe identity, not a new microscopic mechanism.
+The non-trivial content of the fusion is \emph{if} an independent
+calculation of $f_{\rm hyst}$ from the nucleation/hysteresis dynamics
+and of $\sigma_{\rm eff}$ from $S_{\rm vac}(P)$ converges to the same
+$x_\star$ without inserting Planck data.
+That convergence is \textbf{not yet demonstrated}; Eq.~\eqref{eq:hyst_ident}
+is a falsifiable bridge hypothesis, not a completed derivation.

@@ -1,0 +1,196 @@
+{
+  "camino": 1,
+  "title": "VACIO nucleacion/histeresis -> Omega_Lambda",
+  "target_Omega_Lambda": 0.688,
+  "vacio_reference_run": {
+    "amplitude": 0.05,
+    "lam_entropy": 0.5,
+    "R": 0.0,
+    "S": 0,
+    "frac_active": 0.0,
+    "sigma_in": 0.0,
+    "sigma_out": 0.0,
+    "V_rms": 0.8051446540076771,
+    "V_sat_theory": 0.4472135954999579,
+    "mean_energy_density_model_units": -0.04023378933837181
+  },
+  "hysteresis": {
+    "high_entropy_control": {
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "lam_entropy": 0.5,
+      "V_rms": 0.8051446540128613,
+      "mean_energy_density_model_units": -0.04023378934024284
+    },
+    "low_entropy_after": {
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "lam_entropy": 0.1,
+      "V_rms": 0.5292856545446915,
+      "mean_energy_density_model_units": 0.008394262701711144
+    },
+    "memory_fraction_V_rms": 0.6573795800626862
+  },
+  "threshold_scan": [
+    {
+      "amplitude": 0.001,
+      "lam_entropy": 0.5,
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "V_rms": 0.8051446540138647,
+      "V_sat_theory": 0.4472135954999579,
+      "mean_energy_density_model_units": -0.04023378934060501
+    },
+    {
+      "amplitude": 0.002,
+      "lam_entropy": 0.5,
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "V_rms": 0.8051446540137666,
+      "V_sat_theory": 0.4472135954999579,
+      "mean_energy_density_model_units": -0.04023378934056958
+    },
+    {
+      "amplitude": 0.005,
+      "lam_entropy": 0.5,
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "V_rms": 0.8051446540134665,
+      "V_sat_theory": 0.4472135954999579,
+      "mean_energy_density_model_units": -0.04023378934046128
+    },
+    {
+      "amplitude": 0.01,
+      "lam_entropy": 0.5,
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "V_rms": 0.805144654012947,
+      "V_sat_theory": 0.4472135954999579,
+      "mean_energy_density_model_units": -0.04023378934027381
+    },
+    {
+      "amplitude": 0.02,
+      "lam_entropy": 0.5,
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "V_rms": 0.8051446540118291,
+      "V_sat_theory": 0.4472135954999579,
+      "mean_energy_density_model_units": -0.04023378933987033
+    },
+    {
+      "amplitude": 0.05,
+      "lam_entropy": 0.5,
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0,
+      "sigma_in": 0.0,
+      "sigma_out": 0.0,
+      "V_rms": 0.8051446540076771,
+      "V_sat_theory": 0.4472135954999579,
+      "mean_energy_density_model_units": -0.04023378933837181
+    }
+  ],
+  "candidate_predictions": [
+    {
+      "hypothesis": "H1_active_area_fraction",
+      "formula": "Omega = A_active / A_total",
+      "Omega_pred": 0.0,
+      "delta_vs_Planck": -0.688,
+      "works_without_input": true
+    },
+    {
+      "hypothesis": "H2_phi0_over_phi_star",
+      "formula": "Omega = phi_0 / phi_*",
+      "Omega_pred": 0.5205622071837585,
+      "delta_vs_Planck": -0.1674377928162415,
+      "works_without_input": true
+    },
+    {
+      "hypothesis": "H3_one_over_one_plus_Rcrit",
+      "formula": "Omega = 1/(1+R_crit)",
+      "Omega_pred": 0.2132086602799302,
+      "delta_vs_Planck": -0.4747913397200697,
+      "works_without_input": true
+    },
+    {
+      "hypothesis": "H4_Rcrit_over_Rfinal",
+      "formula": "Omega = R_crit / R_final",
+      "Omega_pred": 3690240999.999999,
+      "delta_vs_Planck": 3690240999.311999,
+      "works_without_input": true
+    },
+    {
+      "hypothesis": "H5_one_minus_sqrt_alpha",
+      "formula": "Omega = 1 - sqrt(alpha)",
+      "Omega_pred": 0.5527864045000421,
+      "delta_vs_Planck": -0.13521359549995782,
+      "works_without_input": true
+    },
+    {
+      "hypothesis": "H6_saturation_energy_over_max",
+      "formula": "Omega = <|V|>/V_sat (model units)",
+      "Omega_pred": 1.8003581780817146,
+      "delta_vs_Planck": 1.1123581780817147,
+      "works_without_input": true
+    },
+    {
+      "hypothesis": "H8_hysteresis_memory_fraction",
+      "formula": "Omega = V_rms_low / V_rms_high",
+      "Omega_pred": 0.6573795800626862,
+      "delta_vs_Planck": -0.030620419937313792,
+      "works_without_input": true
+    },
+    {
+      "hypothesis": "H7_complement_of_boundary",
+      "formula": "Omega = 1 - a0/(cH0)  [uses H0,a0 \u2014 INPUT]",
+      "Omega_pred": 0.8167469583894088,
+      "delta_vs_Planck": 0.12874695838940886,
+      "works_without_input": true
+    }
+  ],
+  "best_match_honest": {
+    "hypothesis": "H8_hysteresis_memory_fraction",
+    "formula": "Omega = V_rms_low / V_rms_high",
+    "Omega_pred": 0.6573795800626862,
+    "delta_vs_Planck": -0.030620419937313792,
+    "works_without_input": true
+  },
+  "best_match_including_input": {
+    "hypothesis": "H8_hysteresis_memory_fraction",
+    "formula": "Omega = V_rms_low / V_rms_high",
+    "Omega_pred": 0.6573795800626862,
+    "delta_vs_Planck": -0.030620419937313792,
+    "works_without_input": true
+  },
+  "dimensional_bridge": {
+    "verdict": "FAIL_without_external_ruler",
+    "explanation": "El modelo VACIO no tiene unidad de longitud/tiempo/masa. phi_star, alpha, beta son numeros puros del grid 128x128. Para obtener kg/m^3 hay que importar al menos una escala fisica (H0, a0, l_Planck, o rho_crit).",
+    "model_energy_density": -0.04023378933837181,
+    "phi_star_adimensional": 0.1921,
+    "naive_phi_star_to_rho_kg_m3": 0.0013617878638080999,
+    "rho_crit_kg_m3_for_reference_only": 8.532855166456884e-27
+  },
+  "camino1_verdict": "MARGINAL \u2014 needs 3D covariant embedding",
+  "simple_summary_es": "VACIO explica COMO se organiza el vacio (burbuja, memoria), pero sus numeros viven en un mundo sin metros ni segundos. Ninguna formula solo-VACIO acerto Omega=0.69 sin traer H0 o Planck."
+}

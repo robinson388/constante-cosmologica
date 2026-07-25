@@ -1,0 +1,60 @@
+{
+  "model": "S_vac = S0 - (chi/2)(P-P0)^2 + (zeta/6)(P-P0)^3; L_loc -> L_quad * (1 - eta/18), eta=(P0-phi0)/P0",
+  "inputs": {
+    "P0": 0.1921,
+    "phi_0": 0.1,
+    "R_crit": 3.6902409999999994,
+    "eta": 0.4794377928162415,
+    "Delta_P_shell": 0.1,
+    "zeta_over_chi": 1.598125976054138,
+    "chi_mechanical_J_per_K_m3": 6.261071683867367e+22,
+    "zeta_J_per_K_m4": 1.0005981295925462e+23
+  },
+  "L_loc": {
+    "quadratic": 0.7056687711997437,
+    "cubic_factor": 0.9733645670657644,
+    "cubic_corrected": 0.6868729779706685,
+    "audit_wrong_factor_Omega_over_x": 1.025644300131477,
+    "correct_factor_x_over_Omega": 0.9749968871974526
+  },
+  "x_star": {
+    "quadratic_H0_only": 0.6707978583918474,
+    "cubic_corrected_H0_only": 0.6891537673432956,
+    "delta_vs_Omega_L_quad": -0.017202141608152588,
+    "delta_vs_Omega_L_cubic": 0.001153767343295642,
+    "delta_vs_f_hyst_2d_cubic": 0.017342663164569783,
+    "pct_vs_Omega_L_cubic": 0.1676987417580875
+  },
+  "targets": {
+    "Omega_L": 0.688,
+    "f_hyst_2d": 0.6718111041787258
+  },
+  "quartic_truncation": {
+    "ratio_xiDelta_over_4zeta": 1.2717317765075535,
+    "interpretation": "~0.1 => O(10%) quartic on shell; not permille-exact"
+  },
+  "overfitting_audit": [
+    {
+      "zeta_factor": 0.8,
+      "label": "0.80x",
+      "x_star": 0.6854026555640256,
+      "delta_vs_Omega_L": -0.002597344435974369,
+      "pct_vs_Omega_L": -0.3775209936009258
+    },
+    {
+      "zeta_factor": 1.0,
+      "label": "nominal",
+      "x_star": 0.6891537673432956,
+      "delta_vs_Omega_L": 0.001153767343295642,
+      "pct_vs_Omega_L": 0.1676987417580875
+    },
+    {
+      "zeta_factor": 1.2,
+      "label": "1.20x",
+      "x_star": 0.6929461636753812,
+      "delta_vs_Omega_L": 0.004946163675381254,
+      "pct_vs_Omega_L": 0.7189191388635545
+    }
+  ],
+  "verdict_es": "Cuadratico x*=0.6708 (Delta Omega_L -0.0172). Cubico eta/18=0.0266, L_factor=0.9734, x*=0.6892 (Delta Omega_L +0.0012, +0.17%). Sin input Omega_L en zeta/chi."
+}

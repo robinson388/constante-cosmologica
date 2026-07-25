@@ -1,0 +1,27 @@
+{
+  "description": "Golden checks for verify_outputs.py (paper_lambda reproducibility)",
+  "tolerance_rel": 0.02,
+  "tolerance_abs": 0.005,
+  "checks": [
+    {
+      "file": "camino12_chi_Svac_outputs.json",
+      "keys": {"result_H0_only.x_star": 0.6708}
+    },
+    {
+      "file": "camino12_Svac_cubic_outputs.json",
+      "keys": {"x_star.cubic_corrected_H0_only": 0.6892}
+    },
+    {
+      "file": "test2_sparc_field_outputs.json",
+      "keys": {"summary.v_50kpc_aqual_kms": 200.9}
+    },
+    {
+      "file": "test4_spherical_core_outputs.json",
+      "keys": {"derived.finite_core": true}
+    },
+    {
+      "file": "camino12_sigma_outputs.json",
+      "keys": {"enhancement_factor_to_match_f_hyst": 7.99}
+    }
+  ]
+}

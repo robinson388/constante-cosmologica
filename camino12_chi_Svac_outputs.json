@@ -1,0 +1,42 @@
+{
+  "closed_form": "sigma_eff = sigma_stack * (sigma_GH/sigma_stack) * P0 * L_loc * sqrt(f_lambda), lambda_P = 4 rho_crit c^2 / P0^4 (H0 only)",
+  "inputs": {
+    "P0_phi_star": 0.1921,
+    "R_crit": 3.6902409999999994,
+    "R_H_m": 1.37249683472327e+26,
+    "S_hor": 2.265441229449521e+122,
+    "lambda_P_H0_only": 2.252611577494577e-06,
+    "L_loc_formula": "sqrt(ln(R_H/l_P)/ln(S_hor))"
+  },
+  "result_H0_only": {
+    "sigma_stack": 1052560654034587.9,
+    "sigma_GH": 3.5085355134486268e+16,
+    "L_loc": 0.7056687711997437,
+    "f_lambda": 3.0,
+    "enh_chi": 4.5186323649156925,
+    "enh_total": 7.826500836759091,
+    "sigma_eff": 8237866839541398.0,
+    "alpha_s": 0.23479502510277275,
+    "x_star": 0.6707978583918474,
+    "delta_vs_Omega_L": -0.017202141608152588,
+    "delta_vs_f_hyst_2d": -0.0010132457868784472
+  },
+  "result_with_rho_L": {
+    "sigma_stack": 1052560654034587.9,
+    "sigma_GH": 3.5085355134486268e+16,
+    "L_loc": 0.7056687711997437,
+    "f_lambda": 2.550294100687213,
+    "enh_chi": 4.5186323649156925,
+    "enh_total": 7.216093333983534,
+    "sigma_eff": 7595375919192338.0,
+    "alpha_s": 0.216482800019506,
+    "x_star": 0.7275404789009039,
+    "delta_vs_Omega_L": 0.03954047890090395,
+    "delta_vs_f_hyst_2d": 0.05572937472217809
+  },
+  "targets": {
+    "Omega_L": 0.688,
+    "f_hyst_2d": 0.6718111041787258
+  },
+  "verdict_es": "H0-only: x*=0.6708 (Delta vs Omega_L -0.0172, vs f_hyst -0.0010). Con rho_L: x*=0.7275."
+}

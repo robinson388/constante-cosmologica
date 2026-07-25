@@ -1,0 +1,23 @@
+{
+  "model": "F/(rho_crit c^2 V_H) = (1-x)Omega_m + alpha_s x^2",
+  "stationarity": "x* = Omega_m / (2 alpha_s)",
+  "targets": {
+    "Omega_L": 0.688,
+    "f_hyst": 0.6573795800626862,
+    "Omega_m": 0.315
+  },
+  "sigma_stack_Pa": 1052560654034587.9,
+  "alpha_stack": 0.030000000000000002,
+  "x_star_stack": 5.25,
+  "sigma_required_for_f_hyst_Pa": 8406016251911331.0,
+  "x_star_required": 0.6573795800626862,
+  "sigma_stack_x8_Pa": 8420485232276703.0,
+  "x_star_stack_x8": 0.65625,
+  "enhancement_factor_to_match_f_hyst": 7.986253542434908,
+  "fusion_closure": {
+    "f_hyst_plus_Omega_m": 0.9723795800626862,
+    "flatness_gap_to_1": 0.027530419937313845,
+    "note": "f_hyst+Om_m ~ 0.972; no cierra planitud sola (falta ~2.8%)"
+  },
+  "verdict_es": "sigma_stack da x*~0.05 (muy bajo). Para x*=f_hyst hace falta sigma ~ 8.406e+15 Pa (~8.0x sigma_stack). El factor ~8 es la brecha a cerrar con VACIO 3D + chi(P)."
+}

@@ -1,0 +1,21 @@
+{
+  "test": "Test 4 \u2014 spherical static core from V(P) quartic (Hayward derived)",
+  "reference": "reference/attack_gr_bh_derived.py",
+  "inputs": {
+    "M_Gc1": 1.0,
+    "P0": 0.1921,
+    "ell_target_Gc1": 0.676,
+    "lambda_P_derived": 767.2528936641024
+  },
+  "derived": {
+    "ell_sat_Gc1": 0.676,
+    "ell_sat_km": 1.99645742227721,
+    "P_at_center": 0.1921,
+    "P_at_infinity": 0.1921,
+    "Kretschmann_at_center": 1.7241869029485604e+18,
+    "finite_core": true
+  },
+  "ansatz_benchmark_Pa": -1.1360265345630719e+29,
+  "derivation": "lambda_P = 3/(2*pi*ell^2*P0^4) from de Sitter core V(0); Eq.36 not used",
+  "verdict_es": "P(r) integrado: P(0)=0.1921, P(inf)=0.1921, K(0)=1.724e+18 finito. ell=0.676 (derivado, no ansatz)."
+}

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Alias constd: compilar paper_lambda.pdf (+ copia a Downloads si existe ruta WSL)
+set -euo pipefail
+exec bash "$(dirname "$0")/compile.sh"

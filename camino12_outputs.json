@@ -1,0 +1,114 @@
+{
+  "camino": "1+2 fusion",
+  "target_Omega_Lambda": 0.688,
+  "Omega_m": 0.315,
+  "Omega_bd": 0.18325304161059122,
+  "Omega_r": 9e-05,
+  "f_hysteresis_camino1": 0.6573795800626862,
+  "attractor_analysis": {
+    "x_from_flatness_1_minus_Om_Or": 0.68491,
+    "x_from_hysteresis_camino1": 0.6573795800626862,
+    "x_from_1_minus_phi0_over_phi_star": 0.47943779281624155,
+    "x_observed_Omega_Lambda": 0.688,
+    "x_passive_fraction_OL_over_OL_plus_Om": 0.6859421734795613,
+    "delta_hyst_vs_obs": -0.030620419937313792,
+    "delta_flatness_vs_obs": -0.003089999999999926,
+    "delta_hyst_vs_flatness": -0.027530419937313866
+  },
+  "shell_bulk_model": {
+    "R_H_m": 1.37249683472327e+26,
+    "V_H_m3": 1.0829855548769494e+79,
+    "A_H_m2": 2.36718699995102e+53,
+    "E_bulk_relaxation_J": 4.6043358729109233e+52,
+    "E_shell_for_Omega_L_obs_J": 6.357779714345406e+52,
+    "sigma_eff_needed_Pa_m": 0.268579529816485,
+    "sigma_eff_needed_Pa": 0.268579529816485,
+    "ratio_shell_over_total_if_tuned": 0.5799774380901846,
+    "verdict": "La tension sigma_eff queda AJUSTADA para reproducir Omega_L; no es prediccion independiente sin regla para sigma_eff."
+  },
+  "predictions": [
+    {
+      "name": "F1_tautology_flatness",
+      "formula": "Omega_L = 1 - Omega_m - Omega_r",
+      "Omega_Lambda_pred": 0.68491,
+      "error_vs_0.688": -0.003089999999999926,
+      "uses_external_input": [
+        "Omega_m",
+        "Omega_r from CMB/matter"
+      ]
+    },
+    {
+      "name": "F2_hysteresis_only",
+      "formula": "Omega_L = f_hyst (VACIO memory)",
+      "Omega_Lambda_pred": 0.6573795800626862,
+      "error_vs_0.688": -0.030620419937313792,
+      "uses_external_input": [
+        "VACIO sim only"
+      ]
+    },
+    {
+      "name": "F3_hyst_times_one_minus_bd",
+      "formula": "Omega_L = f_hyst * (1 - Omega_bd)",
+      "Omega_Lambda_pred": 0.5369127725235058,
+      "error_vs_0.688": -0.15108722747649417,
+      "uses_external_input": [
+        "VACIO + a0,H0"
+      ]
+    },
+    {
+      "name": "F4_passive_share",
+      "formula": "Omega_L/(Omega_L+Omega_m)",
+      "Omega_Lambda_pred": 0.6859421734795613,
+      "error_vs_0.688": -0.0020578265204386215,
+      "uses_external_input": [
+        "Omega_L, Omega_m observed"
+      ]
+    },
+    {
+      "name": "F5_fusion_attractor",
+      "formula": "x* = f_hyst, closure 1-x*=Omega_m+Omega_r",
+      "Omega_Lambda_pred": 0.6573795800626862,
+      "error_vs_0.688": -0.030620419937313792,
+      "uses_external_input": [
+        "VACIO; test if 1-f_hyst ~ Omega_m"
+      ]
+    },
+    {
+      "name": "F6_one_minus_sqrt_alpha",
+      "formula": "1 - sqrt(alpha_VACIO)",
+      "Omega_Lambda_pred": 0.5527864045000421,
+      "error_vs_0.688": -0.13521359549995782,
+      "uses_external_input": [
+        "alpha model parameter"
+      ]
+    }
+  ],
+  "best_non_tautological": {
+    "name": "F2_hysteresis_only",
+    "formula": "Omega_L = f_hyst (VACIO memory)",
+    "Omega_Lambda_pred": 0.6573795800626862,
+    "error_vs_0.688": -0.030620419937313792,
+    "uses_external_input": [
+      "VACIO sim only"
+    ]
+  },
+  "fusion_test_1_minus_f_hyst_vs_Omega_m": {
+    "1_minus_f_hyst": 0.34262041993731385,
+    "Omega_m_obs": 0.315,
+    "delta": 0.027620419937313845,
+    "interpretation": "Si hist\u00e9resis fija Omega_L, entonces 1-f_hyst deberia ser Omega_m+Omega_r. Obs: 0.343 vs Omega_m=0.315 \u2014 CERCA (4%)"
+  },
+  "honest_verdict_es": {
+    "prometedor": [
+      "f_hyst=0.657 vs Omega_L=0.688 (3% diferencia)",
+      "1-f_hyst=0.343 vs Omega_m=0.315 (9% diferencia)",
+      "Omega_L=1-Omega_m-Omega_r es identidad plana (0.685), no mecanismo nuevo por si sola"
+    ],
+    "falta": [
+      "Regla independiente para sigma_eff (tension de contorno) sin ajustar a Planck",
+      "Embedding 3D+1 covariante del atractor VACIO",
+      "Demostrar que f_hyst es unico (no depende de parametros del grid 128x128)"
+    ],
+    "siguiente_paso_derivacion": "Accion F[P]= bulk V(P) + borde sigma(P-P0)^2 en S_H; minimizar F con S_vac(P) de GRAVEDAD3; identificar x*=Omega_L como fraccion de volumen en minimo P0 con hist\u00e9resis."
+  }
+}

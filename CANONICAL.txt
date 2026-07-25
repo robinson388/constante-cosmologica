@@ -1,0 +1,23 @@
+PAPER CONSTANTE COSMOLOGICA (alias const / constd)
+==================================================
+Titulo:  IR Matching of the Cosmological Constant in a Classical Vacuum-Response EFT
+Fuente:  paper_lambda.tex
+Repo:    GitHub -> constante-cosmologica (este directorio)
+
+NOTA: Este paper es independiente de GRAVEDAD3 (main.tex) y de cromatic2.
+      Se citan como manuscritos companeros en la bibliografia.
+
+Reproducibilidad:
+  pip install -r requirements.txt
+  bash const                 # run_all.sh quick
+  python3 verify_outputs.py
+  bash constd                # compile.sh -> paper_lambda.pdf
+
+Scripts clave:
+  test2_sparc_field.py
+  test4_spherical_core.py
+  camino12_Svac_cubic.py
+
+Docs PRD:
+  APS_PRD_CHECKLIST.md
+  COVER_LETTER_PRD.md

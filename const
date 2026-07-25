@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Alias const: reproducibilidad rapida del paper
+set -euo pipefail
+exec bash "$(dirname "$0")/run_all.sh" quick

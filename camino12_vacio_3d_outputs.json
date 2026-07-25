@@ -1,0 +1,229 @@
+{
+  "elapsed_total_s": 455.4702548980713,
+  "targets": {
+    "Omega_L": 0.688,
+    "Omega_m": 0.315,
+    "R_crit": 3.6902409999999994
+  },
+  "2D_reference": {
+    "grid": "128x128",
+    "dim": 2,
+    "steps_hi": 8000,
+    "steps_lo": 8000,
+    "V_rms_high": 0.8051070862303329,
+    "V_rms_low": 0.5289112729866028,
+    "f_hyst": 0.6569452462070203,
+    "coherence_high": {
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0
+    },
+    "coherence_low": {
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0
+    }
+  },
+  "3D_convergence_scan": [
+    {
+      "grid": "32x32x32",
+      "dim": 3,
+      "steps_hi": 1600,
+      "steps_lo": 1600,
+      "V_rms_high": 0.36362992464449145,
+      "V_rms_low": 0.4485523363417165,
+      "f_hyst": 1.2335407675269046,
+      "coherence_high": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "coherence_low": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "elapsed_s": 22.048986673355103,
+      "delta_vs_Omega_L": 0.5455407675269046
+    },
+    {
+      "grid": "40x40x40",
+      "dim": 3,
+      "steps_hi": 2000,
+      "steps_lo": 2000,
+      "V_rms_high": 0.4818013039271831,
+      "V_rms_low": 0.5137105148989053,
+      "f_hyst": 1.0662289842547723,
+      "coherence_high": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "coherence_low": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "elapsed_s": 43.422075510025024,
+      "delta_vs_Omega_L": 0.37822898425477236
+    },
+    {
+      "grid": "48x48x48",
+      "dim": 3,
+      "steps_hi": 2400,
+      "steps_lo": 2400,
+      "V_rms_high": 0.5883055159737912,
+      "V_rms_low": 0.5396913180146892,
+      "f_hyst": 0.9173657281138465,
+      "coherence_high": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "coherence_low": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "elapsed_s": 90.04785084724426,
+      "delta_vs_Omega_L": 0.2293657281138466
+    }
+  ],
+  "3D_protocol_scan_n48": [
+    {
+      "grid": "48x48x48",
+      "dim": 3,
+      "steps_hi": 2400,
+      "steps_lo": 2400,
+      "V_rms_high": 0.5883055159737912,
+      "V_rms_low": 0.5396913180146892,
+      "f_hyst": 0.9173657281138465,
+      "coherence_high": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "coherence_low": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "protocol": "equal_steps",
+      "elapsed_s": 89.98726105690002,
+      "delta_vs_Omega_L": 0.2293657281138466
+    },
+    {
+      "grid": "48x48x48",
+      "dim": 3,
+      "steps_hi": 2400,
+      "steps_lo": 1200,
+      "V_rms_high": 0.5883055159737912,
+      "V_rms_low": 0.5539810219315575,
+      "f_hyst": 0.9416553251495218,
+      "coherence_high": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "coherence_low": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "protocol": "lo_half",
+      "elapsed_s": 67.43184041976929,
+      "delta_vs_Omega_L": 0.2536553251495218
+    },
+    {
+      "grid": "48x48x48",
+      "dim": 3,
+      "steps_hi": 2400,
+      "steps_lo": 576,
+      "V_rms_high": 0.5883055159737912,
+      "V_rms_low": 0.567916284134582,
+      "f_hyst": 0.9653424431938904,
+      "coherence_high": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "coherence_low": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "protocol": "lo_quarter",
+      "elapsed_s": 56.036948442459106,
+      "delta_vs_Omega_L": 0.27734244319389045
+    },
+    {
+      "grid": "48x48x48",
+      "dim": 3,
+      "steps_hi": 2400,
+      "steps_lo": 240,
+      "V_rms_high": 0.5883055159737912,
+      "V_rms_low": 0.5786554975879677,
+      "f_hyst": 0.9835969268963077,
+      "coherence_high": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "coherence_low": {
+        "R": 0.0,
+        "S": 0,
+        "frac_active": 0.0
+      },
+      "protocol": "lo_tenth",
+      "elapsed_s": 57.986735582351685,
+      "delta_vs_Omega_L": 0.2955969268963078
+    }
+  ],
+  "3D_best_vs_Planck": {
+    "grid": "48x48x48",
+    "dim": 3,
+    "steps_hi": 2400,
+    "steps_lo": 2400,
+    "V_rms_high": 0.5883055159737912,
+    "V_rms_low": 0.5396913180146892,
+    "f_hyst": 0.9173657281138465,
+    "coherence_high": {
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0
+    },
+    "coherence_low": {
+      "R": 0.0,
+      "S": 0,
+      "frac_active": 0.0
+    },
+    "elapsed_s": 90.04785084724426,
+    "delta_vs_Omega_L": 0.2293657281138466
+  },
+  "chi_bridge": {
+    "L_loc_base": 0.7056687711997437,
+    "x_star_attractor_H0_only": 0.6707978583918474,
+    "delta_xstar_vs_Omega_L": -0.017202141608152588,
+    "L_loc_for_Omega_L": 0.6880248553122015,
+    "x_star_if_L_for_Omega_L": 0.6880000000000001,
+    "L_loc_for_f_hyst_3d_best": 0.5160004194053015,
+    "x_star_if_L_for_f3d": 0.9173657281138466,
+    "L_loc_geometric_blend": 0.6111162921075098,
+    "x_star_if_L_blend": 0.7745843247319598
+  },
+  "identification_tests": {
+    "f_hyst_2D_as_x": {
+      "x": 0.6569452462070203,
+      "delta_vs_Omega_L": -0.031054753792979617
+    },
+    "f_hyst_3D_best_as_x": {
+      "x": 0.9173657281138465,
+      "delta_vs_Omega_L": 0.2293657281138466
+    },
+    "x_attractor_as_x": {
+      "x": 0.6707978583918474,
+      "delta_vs_Omega_L": -0.017202141608152588
+    }
+  },
+  "verdict_es": "2D f_hyst=0.6569 (Delta Planck -0.0311). 3D mejor n=48x48x48 f_hyst=0.9174 (Delta +0.2294). Atractor x*=0.6708. L_loc corregido para Planck=0.6880 (factor 0.975 sobre base)."
+}
