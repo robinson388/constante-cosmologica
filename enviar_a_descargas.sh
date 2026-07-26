@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
-# Alias constd: publicar paper_lambda.pdf en Descargas
-set -euo pipefail
-exec bash "$(dirname "$0")/compile.sh"
+#!/bin/bash
+echo "=== const: paper_lambda.tex -> paper_lambda.pdf ==="
+pdflatex paper_lambda.tex && pdflatex paper_lambda.tex
+
+# Comando de copiado real hacia las descargas de Windows
+cp paper_lambda.pdf /mnt/c/Users/robin/Downloads/
+echo "PDF enviado con exito a las descargas de Windows."
