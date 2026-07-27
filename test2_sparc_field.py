@@ -59,7 +59,7 @@ def aqual_rhs(r: float, y: np.ndarray, M_tot: float, R_d: float) -> np.ndarray:
     mu = mu_mond(g / A0)
     denom = r * r * mu + r * r * g * (1.0 / A0) * (1.0 / (1.0 + (g / A0) ** 2) ** 1.5)
     dg_dr = (dF_dr - 2.0 * r * mu * g) / max(denom, 1e-30)
-    return np.array([dg_dr, 0.0])  # placeholder - use alternate formulation
+    return np.array([dg_dr, 0.0])  # Solved via algebraic inversion in integrate_g
 
 
 def integrate_g(M_tot: float, R_d: float, r_max: float) -> tuple[np.ndarray, np.ndarray]:
